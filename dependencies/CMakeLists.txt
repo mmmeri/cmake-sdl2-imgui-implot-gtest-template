@@ -13,3 +13,11 @@ FetchContent_Declare(imgui
   GIT_TAG 8490a262c45a27dc5acbc0ef68f81ed4ba784cf1 # 1.90.2-docking
 )
 add_subdirectory(imgui)
+add_subdirectory(implot)
+
+FetchContent_Declare(
+  gtest
+  GIT_REPOSITORY https://github.com/google/googletest
+  GIT_TAG f8d7d77c06936315286eb55f8de22cd23c188571
+)
+add_subdirectory(gtest)

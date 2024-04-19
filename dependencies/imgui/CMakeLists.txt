@@ -62,5 +62,6 @@ add_library(imgui
 
 target_include_directories(imgui PUBLIC ${imgui_SOURCE_DIR})
 target_link_libraries(imgui PUBLIC SDL2::SDL2)
+target_compile_definitions(imgui PUBLIC IMGUI_DEFINE_MATH_OPERATORS)
 
 FetchContent_MakeAvailable(imgui)

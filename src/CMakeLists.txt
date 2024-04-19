@@ -5,7 +5,11 @@ add_executable(
   window.h window.cpp
 )
 
-target_link_libraries(app PRIVATE SDL2::SDL2 imgui)
+target_link_libraries(app PRIVATE SDL2::SDL2 imgui implot)
+target_include_directories(app PUBLIC ${CMAKE_BINARY_DIR}/_deps/imgui-src)
+target_include_directories(app PUBLIC ${CMAKE_SOURCE_DIR}/dependencies/implot)
+
+add_subdirectory(lib)
 
 if(WIN32)
   # Copy DLLs needed for runtime on Windows

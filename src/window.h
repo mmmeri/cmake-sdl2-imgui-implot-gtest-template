@@ -13,7 +13,7 @@ namespace App
 		{
 			std::string title;
 			int width{1280};
-			int height{720};
+			int height{1280};
 		};
 
 		explicit Window(const Settings& settings);
