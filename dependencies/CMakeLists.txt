@@ -15,9 +15,10 @@ FetchContent_Declare(imgui
 add_subdirectory(imgui)
 add_subdirectory(implot)
 
+# googletest
 FetchContent_Declare(
-  gtest
-  GIT_REPOSITORY https://github.com/google/googletest
-  GIT_TAG f8d7d77c06936315286eb55f8de22cd23c188571
+        googletest
+        GIT_REPOSITORY https://github.com/google/googletest
+        GIT_TAG f8d7d77c06936315286eb55f8de22cd23c188571 # 1.14
 )
-add_subdirectory(gtest)
+add_subdirectory(googletest)
