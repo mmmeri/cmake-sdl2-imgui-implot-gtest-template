@@ -1,17 +1,20 @@
 enable_testing()
-
-add_executable(
-  test_move
-  test_move.cpp
-)
-
-target_link_libraries(
-  test_move PUBLIC GTest::gtest_main
-  
-  # link against libs
-  
-)
-
 include(GoogleTest)
-gtest_discover_tests(test_move)
+include(CTest)
 
+
+function(add_test_executable name)
+    add_executable(
+            ${name}
+            ${name}.cpp
+    )
+
+    target_link_libraries(
+            ${name} PUBLIC GTest::gtest_main engine game
+    )
+
+    gtest_discover_tests(${name})
+endfunction()
+
+
+add_test_executable(test_move)
