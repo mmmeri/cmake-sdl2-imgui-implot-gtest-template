@@ -1,7 +1,10 @@
 #include "app.h"
 
-// TODO: change entry point to main()
+#ifdef WIN32
 int WinMain()
+#else
+int main()
+#endif
 {
 	App::Application app{};
 	return app.run();
