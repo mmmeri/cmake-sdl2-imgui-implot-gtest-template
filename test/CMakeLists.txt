@@ -10,7 +10,7 @@ function(add_test_executable name)
     )
 
     target_link_libraries(
-            ${name} PUBLIC GTest::gtest_main engine game
+            ${name} PUBLIC GTest::gtest_main 
     )
 
     gtest_discover_tests(${name})
