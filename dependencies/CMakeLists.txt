@@ -3,7 +3,7 @@ include(FetchContent)
 FetchContent_Declare(
   SDL2
   GIT_REPOSITORY https://github.com/libsdl-org/SDL.git
-  GIT_TAG 859844eae358447be8d66e6da59b6fb3df0ed778 # 2.30.0
+  GIT_TAG 98d1f3a45aae568ccd6ed5fec179330f47d4d356 # 2.32.8
 )
 add_subdirectory(sdl)
 
